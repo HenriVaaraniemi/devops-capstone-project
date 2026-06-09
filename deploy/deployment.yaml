@@ -17,9 +17,11 @@ spec:
       labels:
         app: accounts
     spec:
-      containers:
-      - image: us.icr.io/sn-labs-t0vahe00/accounts:1
-        name: accounts
+      template:
+        spec:
+          containers:
+          - image: us.icr.io/sn-labs-t0vahe00/accounts:1
+          name: accounts
         resources: {}
         env:
           - name: DATABASE_HOST
